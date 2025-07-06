@@ -1,0 +1,45 @@
+#springdoc:
+#  api-docs:
+#    enabled: true
+#  swagger-ui:
+#    path: /swagger-ui.html
+
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/mydb
+#    username: root
+#    password: ENC(Hj4iN8s7vA7LDkp1LaNFcw==)  # jasypt 密文
+
+
+# jasypt 加密密钥
+jasypt:
+  encryptor:
+    password: mySecretKey      # 用于加解密的密码，自己定义，必须一致
+    algorithm: PBEWithMD5AndDES
+    string-output-type: base64
+
+
+my:
+  config:
+    apiKey: ENC(0TK19HOOsqnwVRKj+RR3cBX5r1B/SX43)
+    #    apikey: test123
+#    apikey: ENC(0lVc1VlwKtGuAQENArPyjA==)
+
+# 自定义加密算法 PBEWithMD5AndDES
+#jasypt:
+#  encryptor:
+#    algorithm: PBEWithMD5AndDES
+#    password: mySecretKey   # 密钥（推荐使用环境变量）
+#    string-output-type: base64
+
+logging:
+  level:
+    com.ulisesbocchio.jasyptspringboot: DEBUG
+
+# 打印如下日志，表示解密成功
+#Decrypting property spring.datasource.password: ENC(...)
+#Property spring.datasource.password decrypted successfully
+
