@@ -1,6 +1,6 @@
-package com.example.controller;
+package com.example.controller.updownload;
 
-import io.swagger.annotations.Api;
+//import io.swagger.annotations.Api;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
@@ -12,10 +12,10 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-@Api(tags = "文件上传下载", description = "文件上传下载")
+//@Api(tags = "文件上传下载", description = "文件上传下载")
 @RestController
 @RequestMapping("/file")
-public class UploadAndDownloadController {
+public class DownloadController {
 
     @GetMapping("/download/{who}")
     public ResponseEntity<Resource> downloadLog(@PathVariable String who) throws IOException {

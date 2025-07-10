@@ -8,6 +8,12 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+# 控制上传文件的大小，默认是1M
+  servlet:
+    multipart:
+      max-file-size: 200MB  # 单个文件的最大大小
+      max-request-size: 200MB # 一次请求（可能包含多个文件）的总大小限制
+
 #  datasource:
 #    url: jdbc:mysql://localhost:3306/mydb
 #    username: root
@@ -42,4 +48,7 @@ logging:
 # 打印如下日志，表示解密成功
 #Decrypting property spring.datasource.password: ENC(...)
 #Property spring.datasource.password decrypted successfully
+
+upload:
+      dir: D:\data\upload\
 

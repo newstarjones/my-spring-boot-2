@@ -19,10 +19,10 @@ public class OcrApiClient {
 //        String apiUrl = "http://localhost:8080/api/ocr";
 
 //        ocr nginx proxy
-        String apiUrl = "http://localhost:9778/api/ocr";
+        String apiUrl = "http://localhost:9778/upload/uploadOcrImg";
 
         // 图片文件路径
-        String imagePath = "D:\\code\\my-spring-boot-2\\screenshots\\screen_1749201090289.png";
+        String imagePath = "D:\\code_sina\\my-spring-boot-2\\screenshots\\screen_1749201090289.png";
 
         File fileToUpload = new File(imagePath);
 

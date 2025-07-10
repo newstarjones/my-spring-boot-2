@@ -21,19 +21,32 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Boot Starter Web 可选，如果需要 REST API -->
 
+<!--     打开 actuator   -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+
+        <!-- Spring Boot Starter Web 可选，如果需要 REST API -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <!-- 其他 starter 依赖可按需添加 -->
-        <dependency>
+<!--        <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
-        </dependency>
+        </dependency>-->
+
+       <!-- <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.2.0</version>
+        </dependency>-->
 
         <!--  这个会报错  -->
        <!-- <dependency>
@@ -88,6 +101,19 @@
             <artifactId>spring-kafka</artifactId>
             <version>2.8.11</version>
         </dependency>
+
+        <!-- Redis 依赖 -->
+<!--        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>-->
+
+        <!-- Redisson 依赖 -->
+<!--        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
+            <version>3.17.6</version> &lt;!&ndash; 建议使用最新稳定版本 &ndash;&gt;
+        </dependency>-->
 
         <!-- JUnit Jupiter API + Engine -->
         <dependency>
