@@ -13,6 +13,15 @@ spring:
     multipart:
       max-file-size: 200MB  # 单个文件的最大大小
       max-request-size: 200MB # 一次请求（可能包含多个文件）的总大小限制
+  redis:
+    redisson:
+      config:
+        singleServerConfig:
+          address: "redis://localhost:6379"
+          password: null
+        threads: 4
+        nettyThreads: 4
+
 
 #  datasource:
 #    url: jdbc:mysql://localhost:3306/mydb
